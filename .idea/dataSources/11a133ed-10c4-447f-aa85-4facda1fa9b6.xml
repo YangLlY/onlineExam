@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="onlineexam@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.1">
+    <root id="1"/>
+    <schema id="2" parent="1" name="onlineexam">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="book_system02"/>
+    <schema id="4" parent="1" name="db_drinkerymanage"/>
+    <schema id="5" parent="1" name="db_hotel"/>
+    <schema id="6" parent="1" name="information_schema"/>
+    <schema id="7" parent="1" name="mybatis"/>
+    <schema id="8" parent="1" name="mysql"/>
+    <schema id="9" parent="1" name="performance_schema"/>
+    <schema id="10" parent="1" name="stservice"/>
+    <schema id="11" parent="1" name="sys"/>
+    <schema id="12" parent="1" name="test"/>
+    <table id="13" parent="2" name="adminuser"/>
+    <table id="14" parent="2" name="exampage"/>
+    <table id="15" parent="2" name="examquestion"/>
+    <table id="16" parent="2" name="stuclass"/>
+    <table id="17" parent="2" name="student"/>
+    <table id="18" parent="2" name="stuscore"/>
+    <column id="19" parent="13" name="AU_ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="20" parent="13" name="AU_NAME">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="21" parent="13" name="AU_PHONE">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="22" parent="13" name="AU_EMAIL">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="23" parent="13" name="AU_DESC">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="24" parent="13" name="AU_USERNAME">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="25" parent="13" name="AU_PASSWORD">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="26" parent="13" name="AU_CREATETIME">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="27" parent="13" name="AU_STATE">
+      <Position>9</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="28" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>AU_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="29" parent="14" name="EXAM_ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="30" parent="14" name="EXAM_TITLE">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="31" parent="14" name="EXAM_DESC">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="32" parent="14" name="EXAM_CONTEXT">
+      <Position>4</Position>
+      <DataType>longtext|0</DataType>
+    </column>
+    <column id="33" parent="14" name="EXAM_TIME">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="34" parent="14" name="CREATE_TIME">
+      <Position>6</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="35" parent="14" name="OVERDUE_TIME">
+      <Position>7</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="36" parent="14" name="AU_ID">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="37" parent="14" name="EXAM_RESULT">
+      <Position>9</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <index id="38" parent="14" name="FK_827rq4lr0llp19alnkhdb1bko">
+      <ColNames>AU_ID</ColNames>
+    </index>
+    <key id="39" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>EXAM_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="40" parent="14" name="FK_827rq4lr0llp19alnkhdb1bko">
+      <ColNames>AU_ID</ColNames>
+      <RefSchemaName>onlineexam</RefSchemaName>
+      <RefTableName>adminuser</RefTableName>
+      <RefColNames>AU_ID</RefColNames>
+    </foreign-key>
+    <column id="41" parent="15" name="QUESTION_ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="42" parent="15" name="QUESTION_TITLE">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="43" parent="15" name="QUESTION_CONTEXT">
+      <Position>3</Position>
+      <DataType>longtext|0</DataType>
+    </column>
+    <column id="44" parent="15" name="QUESTION_RESULT">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="45" parent="15" name="QUESTION_SCORE">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="46" parent="15" name="EXAM_ID">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="47" parent="15" name="FK_t6ivhupd3ykqg7is808kyk8so">
+      <ColNames>EXAM_ID</ColNames>
+    </index>
+    <key id="48" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>QUESTION_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="49" parent="15" name="FK_t6ivhupd3ykqg7is808kyk8so">
+      <ColNames>EXAM_ID</ColNames>
+      <RefSchemaName>onlineexam</RefSchemaName>
+      <RefTableName>exampage</RefTableName>
+      <RefColNames>EXAM_ID</RefColNames>
+    </foreign-key>
+    <column id="50" parent="16" name="CLASS_ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="51" parent="16" name="CALSS_NUM">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="52" parent="16" name="CLASS_NAME">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="53" parent="16" name="CREATE_TIME">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="54" parent="16" name="CLASS_STATE">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="55" parent="16" name="AU_ID">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="56" parent="16" name="FK_luhcgo5gnfb8yvdi1adb5w8xx">
+      <ColNames>AU_ID</ColNames>
+    </index>
+    <key id="57" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>CLASS_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="58" parent="16" name="FK_luhcgo5gnfb8yvdi1adb5w8xx">
+      <ColNames>AU_ID</ColNames>
+      <RefSchemaName>onlineexam</RefSchemaName>
+      <RefTableName>adminuser</RefTableName>
+      <RefColNames>AU_ID</RefColNames>
+    </foreign-key>
+    <column id="59" parent="17" name="STU_ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="60" parent="17" name="STU_NAME">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="61" parent="17" name="STU_PHONE">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="62" parent="17" name="STU_AGE">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="63" parent="17" name="STU_STRNUM">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="64" parent="17" name="STU_USERNAME">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="65" parent="17" name="STU_PASSWORD">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="66" parent="17" name="REGISTER_TIME">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="67" parent="17" name="STU_STATE">
+      <Position>9</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="68" parent="17" name="CLASS_ID">
+      <Position>10</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="69" parent="17" name="FK_llqbo5v2kh8mvghh4qrlndris">
+      <ColNames>CLASS_ID</ColNames>
+    </index>
+    <key id="70" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>STU_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="71" parent="17" name="FK_llqbo5v2kh8mvghh4qrlndris">
+      <ColNames>CLASS_ID</ColNames>
+      <RefSchemaName>onlineexam</RefSchemaName>
+      <RefTableName>stuclass</RefTableName>
+      <RefColNames>CLASS_ID</RefColNames>
+    </foreign-key>
+    <column id="72" parent="18" name="SS_ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="73" parent="18" name="SS_SOCRE">
+      <Position>2</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="74" parent="18" name="STU_RESULT">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="75" parent="18" name="EXAM_ID">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="76" parent="18" name="STU_ID">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="77" parent="18" name="FK_p2j31i4i5pkiw1j8fr641hh7v">
+      <ColNames>EXAM_ID</ColNames>
+    </index>
+    <index id="78" parent="18" name="FK_q04ybur55s8524qo4tjcyyqvo">
+      <ColNames>STU_ID</ColNames>
+    </index>
+    <key id="79" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>SS_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="80" parent="18" name="FK_p2j31i4i5pkiw1j8fr641hh7v">
+      <ColNames>EXAM_ID</ColNames>
+      <RefSchemaName>onlineexam</RefSchemaName>
+      <RefTableName>exampage</RefTableName>
+      <RefColNames>EXAM_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="81" parent="18" name="FK_q04ybur55s8524qo4tjcyyqvo">
+      <ColNames>STU_ID</ColNames>
+      <RefSchemaName>onlineexam</RefSchemaName>
+      <RefTableName>student</RefTableName>
+      <RefColNames>STU_ID</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>
